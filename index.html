@@ -1,0 +1,136 @@
+<!Author : Ishan Patel (Job Application From Assignemnt)>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <h1>Apply for Position</h1>
+	<p>Please Complete the form below to apply for a position with us</p>
+	<br>
+	<hr>
+      <form action="connection.php" method="post">
+        
+           <li class="form-row">
+            <label>First Name</label>
+            <input type="text" name="fname" placeholder="Enter your First name" required>
+          
+            <label >Last Name</label>
+            <input type="text" name="lname" placeholder="Enter your Last Name" required>
+          </li>
+		  
+ 
+          <li class="form-row">
+            <label>Email</label>
+            <input  type="email" id="email" name="email" placeholder="Enter your email" required>
+		  </li>	
+			
+		<li class="form-row">
+            <label >Linkedin Profie Link</label>
+            <input type="url" name="linkedin" onblur="checkURL(this);" placeholder="Enter Link">
+		</li>
+        
+		<li class="form-row">
+            <label>Confirm Drupal Profile Link</label>
+            <input type="url" name="drupal" onblur="checkURL(this);" type="text">
+		</li>
+			
+			<li class="form-row">
+            <label>Position Applying for</label>
+            <input type="text" name="position" placeholder="Enter Position" required>
+			</li>
+			
+			<li class="form-row">
+				<label>When you can start</label>
+				<input type="text" name="startdate" placeholder="Enter Estimate Date" required>
+			</li>
+			
+			<li class="form-row">
+				<label>Mobile Number</label>
+				<input type="tel" name="mobile" placeholder="Enter your number" required>
+			</li>
+			
+		  <li class="form-row">
+		  
+				  <label >Current City</label>
+			
+			</li>
+			<li class="form-row">
+		<label > <input type="radio"  name="city" onclick="show1();" value="Delhi" > Delhi </label>
+        <label > <input type="radio"  name="city" onclick="show2();"  value="Other"> Other </label>
+        
+				</li>
+				
+		
+		  <div id="div1" style="display: none" >
+		  <li class="form-row">
+				<label>City Name</label>
+				<input type="text" name="cityname" placeholder="City Name" />
+			</li>
+			</div>
+         <div  id="div2"style="display: none">
+		 <li class="form-row">
+				<label >Are you willing to relocate?</label>
+				
+			</li>
+			
+			<li class="form-row">
+			
+			<label> <input type="radio" name="relocate" value="Yes"> Yes </label>
+				<label> <input type="radio" name="relocate" value="No"> No </label>
+				<label> <input type="radio" name="relocate" value="Notsure"> Not Sure </label>
+				<input type="hidden" name="relocate" value="" checked> 
+			</li>
+			</div>
+			
+			
+			<li class="form-row">
+				<label>Last company you worked for</label>
+				<input type="text" name="lastcompany" placeholder="Last Company">
+			</li>
+			
+			<li class="form-row">
+				<label >Comments</label>
+			
+				
+			</li>
+			
+			<textarea class="textarea" name="comments"></textarea>
+			
+			<div class="center">
+       
+          <input class="button" type="submit" value="submit">
+        </div>
+	
+		
+      </form>
+   </div>
+
+
+<script >
+function show1(){
+  document.getElementById('div1').style.display ='none';
+  document.getElementById('div2').style.display ='none';
+  
+}
+function show2(){
+  document.getElementById('div1').style.display = 'block';
+   document.getElementById('div2').style.display = 'block';
+  
+}
+
+function checkURL (abc) {
+  var string = abc.value;
+  if (!~string.indexOf("http")) {
+    string = "http://" + string;
+  }
+  abc.value = string;
+  return abc
+}
+</script>
+</body>
+</html>
