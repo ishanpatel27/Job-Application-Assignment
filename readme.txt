@@ -8,6 +8,7 @@ Files :
 -style.css			: CSS File 
 -connection.php		: PHP File for connection 
 -application.sql	: Database File 
+-form Screenshot : Screenshot of the Form.
 
 Steps to Run :
 
